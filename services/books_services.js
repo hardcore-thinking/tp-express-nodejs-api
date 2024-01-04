@@ -36,4 +36,10 @@ const books = [
     }
 ]
 
-module.exports = { books };
+exports.getBooks = () => {
+    return books;
+}
+
+exports.getBookById = (id) => {
+    return books.find(book => book.id === id);
+}
