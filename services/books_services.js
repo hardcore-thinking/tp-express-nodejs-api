@@ -1,4 +1,4 @@
-const books = [
+let books = [
     {
         id: 0,
         title: "Harry Potter à l'école des sorciers",
@@ -41,5 +41,17 @@ exports.getBooks = () => {
 }
 
 exports.getBookById = (id) => {
-    return books.find(book => book.id === id);
+    return books.find((book) => book.id === id);
+}
+
+exports.addBook = (title, release_year) => {
+    books.push({
+        id: books.length,
+        title,
+        release_year
+    });
+}
+
+exports.deleteBookById = (id) => {
+    books.splice(books.findIndex(book => book.id === parseInt(id)), 1);
 }

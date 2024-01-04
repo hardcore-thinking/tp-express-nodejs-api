@@ -3,7 +3,7 @@ const { getBooks, getBookById, addBook, deleteBookById } = require('../controlle
 
 router.get('/', getBooks);
 router.get('/:id', getBookById);
-router.put('/add', addBook);
+router.post('/add', addBook);
 router.delete('/:id/delete', deleteBookById);
 
 module.exports = router;
