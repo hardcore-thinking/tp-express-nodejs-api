@@ -27,12 +27,18 @@ exports.getUserById = (request, response) => {
 
 exports.addUser = (request, response) => {
     console.log(`POST request received for /users`);
-    addUser(request.body.firstName !== undefined ? request.body.firstName : null,
-            request.body.lastName !== undefined ? request.body.lastName : null);
-    response.status(201).json({
-        status: 201,
-        details: "The user has been added successfully"
-    });
+    if (request.body.firstName === undefined && request.body.lastName === undefined) {
+        response.status(400).json({
+            status: 400,
+            details: "No datas were provided for the user creation"
+        });
+    } else {
+        addUser(request.body.firstName, request.body.lastName);
+        response.status(201).json({
+            status: 201,
+            details: "The user has been added successfully"
+        });
+    }
 }
 
 exports.updateUser = (request, response) => {
@@ -41,6 +47,11 @@ exports.updateUser = (request, response) => {
         response.status(404).json({
             status: 404,
             details: "The given id doesn't exist"
+        });
+    } else if (request.body.firstName === undefined && request.body.lastName === undefined) {
+        response.status(304).json({
+            status: 304,
+            details: "No datas were provided for the user datas update"
         });
     } else {
         updateUser(parseInt(request.params.id), request.body.firstName, request.body.lastName);

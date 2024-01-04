@@ -36,9 +36,9 @@ exports.getUserById = (id) => {
 
 exports.addUser = (firstName, lastName) => {
     users.push({
-        id: users.length(),
-        firstName,
-        lastName
+        id: users.length,
+        firstName: firstName !== undefined ? firstName : null,
+        lastName: lastName !== undefined ? lastName : null
     });
 }
 
