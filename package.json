@@ -1,0 +1,19 @@
+{
+  "name": "tp-express-api-nodejs",
+  "version": "1.0.0",
+  "description": "TP de création d'une API de bibliothèque dans le cadre des cours de Développement API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardcore-thinking/tp-express-nodejs-api.git"
+  },
+  "author": "Alexy MANSUY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hardcore-thinking/tp-express-nodejs-api/issues"
+  },
+  "homepage": "https://github.com/hardcore-thinking/tp-express-nodejs-api#readme"
+}
