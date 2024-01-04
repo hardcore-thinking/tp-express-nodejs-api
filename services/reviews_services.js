@@ -11,10 +11,15 @@ exports.getReviews = () => {
     return reviews;
 }
 
-exports.addReview = () => {
-
+exports.addReview = (userId, bookId, note) => {
+    reviews.push({
+        userId,
+        bookId,
+        date: new Date().toISOString(),
+        note
+    });
 }
 
-exports.deleteReview = () => {
-
+exports.deleteReview = (userId, bookId) => {
+    reviews.splice(reviews.findIndex((review) => review.userId === userId && review.bookId === bookId), 1);
 }
