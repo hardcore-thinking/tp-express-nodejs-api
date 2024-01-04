@@ -53,5 +53,5 @@ exports.addBook = (title, release_year) => {
 }
 
 exports.deleteBookById = (id) => {
-    books.splice(books.findIndex(book => book.id === parseInt(id)), 1);
+    books.splice(books.findIndex(book => book.id === id), 1);
 }
