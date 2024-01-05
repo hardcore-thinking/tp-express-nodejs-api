@@ -44,7 +44,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "4"
+							"value": "2"
 						}
 					]
 				}
@@ -100,7 +100,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "4"
+							"value": "7"
 						}
 					]
 				}
@@ -145,7 +145,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "6"
+							"value": "0"
 						}
 					]
 				}
@@ -188,7 +188,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\r\n    \"firstName\": \"Pierre\",\r\n    \"lastName\": \"Caillou\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -237,7 +237,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": ""
+							"value": "0"
 						}
 					]
 				}
@@ -268,15 +268,25 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 2,\r\n    \"bookId\": 5,\r\n    \"note\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/reviews",
+					"raw": "http://localhost:8080/reviews/add",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"reviews"
+						"reviews",
+						"add"
 					]
 				}
 			},
@@ -303,11 +313,11 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "0"
+							"value": "2"
 						},
 						{
 							"key": "bookId",
-							"value": "0"
+							"value": "5"
 						}
 					]
 				}
