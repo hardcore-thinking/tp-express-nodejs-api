@@ -32,7 +32,8 @@ exports.addBook = (request, response) => {
             status: 201,
             details: "The book has been added successfully"
         });
-    } else {
+    }
+    else {
         response.status(400).json({
             status: 400,
             details: "Title and/or release year is/are missing"
